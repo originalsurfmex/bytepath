@@ -1,12 +1,12 @@
 --! file: main.lua
 
 Object = require "libraries.classic"
---Test = require 'objects.test'
+--TestClass = require 'objects.testclass'
 --Circle = require 'objects.circle'
 --HyperCircle = require 'objects.hypercircle'
 
 local image
-local object_files
+local object_files = {}
 local c1
 local hc1
 local counter_table
@@ -68,8 +68,8 @@ end
 function requireFiles(files)
   for _,filepath in ipairs(files) do
     local filepath = filepath:sub(1, -5)
+    -- using a split function because lua doesn't have one built-in
     local parts = filepath:split("/")
-    --somehow this gets the capitalization right, but how? idunno yet
     local class = parts[#parts]
     _G[class] = require(filepath)
   end
