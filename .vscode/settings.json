@@ -1,7 +1,11 @@
 {
     "Lua.diagnostics.globals": [
-        "love"
+        "love",
+        "recursiveEnumerate"
     ],
     "pixelbyte.love2d.debug": true,
-    "lua-local.interpreter": "C:\\lua\\luajit\\luajit.exe"
+    "lua-local.interpreter": "C:\\lua\\luajit\\luajit.exe",
+    "Lua.diagnostics.disable": [
+        "unused-local"
+    ]
 }
